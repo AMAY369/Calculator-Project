@@ -32,79 +32,138 @@
   <p></p>
   <p>
     <button class="gray" onclick="
-  calculation+='1';
-  console.log(calculation);
+  updateCalculator('1');
   ">1</button>
   <button class="gray" onclick="
-  calculation+='2';
-  console.log(calculation);
+  updateCalculator('2');
   ">2</button>
   <button class="gray" onclick="
-  calculation+='3';
-  console.log(calculation);
+  updateCalculator('3');
   ">3</button>
   <button class="gray yellow"  onclick="
-  calculation+=' + ';
-  console.log(calculation);
+  updateCalculator('+');
   ">+</button>
   </p>
   <p>
     <button class="gray" onclick="
-  calculation+='4';
-  console.log(calculation);
+  updateCalculator('4');
   ">4</button>
   <button class="gray" onclick="
-  calculation+='5';
-  console.log(calculation);
+  updateCalculator('5');
   ">5</button>
   <button class="gray" onclick="
-  calculation+='6';
-  console.log(calculation);
+  updateCalculator('6');
   ">6</button>
   <button class="gray yellow" onclick="
-  calculation+=' - ';
-  console.log(calculation);
+  updateCalculator('-');
   ">-</button>
   </p>
   <p>
     <button class="gray" onclick="
-  calculation+='7';
-  console.log(calculation);
+  updateCalculator('7');
   ">7</button>
   <button class="gray" onclick="
-  calculation+='8';
-  console.log(calculation);
+  updateCalculator('8');
   ">8</button>
   <button class="gray" onclick="
-  calculation+='9';
-  console.log(calculation);
+  updateCalculator('9');
   ">9</button>
   <button class="gray yellow" onclick="
-  calculation+=' * ';
-  console.log(calculation);
+  updateCalculator('*');
   ">*</button>
   </p>
   <p>
     <button class="gray" onclick="
-  calculation+='0';
-  console.log(calculation);
+  updateCalculator('0');
   ">0</button>
   <button class="gray" onclick="
-  calculation+='.';
-  console.log(calculation);
+  updateCalculator('.');
   ">.</button>
   <button class="gray" onclick="
-  calculation=eval(calculation);
-  console.log(calculation);
+  updateCalculator('=');
   ">=</button>
   <button class="gray yellow" onclick="
-  calculation+=' / ';
-  console.log(calculation);
+  updateCalculator('/');
   ">/</button>
   </p>
-  <p><button class="gray clear" onclick="calculation=''">Clear</button></p>
+  <p><button class="gray clear" onclick="
+  updateCalculator('clear');
+  ">Clear</button></p>
   <script>
     var calculation='';
+    function updateCalculator(operation){
+      switch (operation) {
+        case '1':
+        calculation+='1';
+        console.log(calculation);
+          break;
+        case '2':
+        calculation+='2';
+        console.log(calculation);
+          break;
+        case '3':
+        calculation+='3';
+        console.log(calculation);
+          break;
+        case '+':
+        calculation+='+';
+        console.log(calculation);
+          break;
+        case '4':
+        calculation+='4';
+        console.log(calculation);
+          break;
+        case '5':
+        calculation+='5';
+        console.log(calculation);
+          break;
+        case '6':
+        calculation+='6';
+        console.log(calculation);
+          break;
+        case '-':
+        calculation+='-';
+        console.log(calculation);
+          break;
+        case '7':
+        calculation+='7';
+        console.log(calculation);
+          break;
+        case '8':
+        calculation+='8';
+        console.log(calculation);
+          break;
+        case '9':
+        calculation+='9';
+        console.log(calculation);
+          break;
+        case '*':
+        calculation+='*';
+        console.log(calculation);
+          break;
+        case '0':
+        calculation+='0';
+        console.log(calculation);
+          break;
+        case '.':
+        calculation+='.';
+        console.log(calculation);
+          break;
+        case '=':
+        calculation=eval(calculation);
+        console.log(calculation);
+          break;
+        case '/':
+        calculation+='/';
+        console.log(calculation);
+          break;
+        case 'clear':
+        calculation='';
+        console.clear();
+        console.log(calculation);
+          break;
+      }
+    }
   </script>
 </body>
 </html>
