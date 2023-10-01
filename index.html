@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+    .gray{
+      background-color: rgb(37, 36, 36);
+      height: 60px;
+      width: 60px;
+      border: 0px solid black;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 3px;
+    }
+    .yellow{
+      background-color: orange;
+    }
+    .clear{
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <p></p>
+  <p>
+    <button class="gray" onclick="
+  updateCalculator('1');
+  ">1</button>
+  <button class="gray" onclick="
+  updateCalculator('2');
+  ">2</button>
+  <button class="gray" onclick="
+  updateCalculator('3');
+  ">3</button>
+  <button class="gray yellow"  onclick="
+  updateCalculator('+');
+  ">+</button>
+  </p>
+  <p>
+    <button class="gray" onclick="
+  updateCalculator('4');
+  ">4</button>
+  <button class="gray" onclick="
+  updateCalculator('5');
+  ">5</button>
+  <button class="gray" onclick="
+  updateCalculator('6');
+  ">6</button>
+  <button class="gray yellow" onclick="
+  updateCalculator('-');
+  ">-</button>
+  </p>
+  <p>
+    <button class="gray" onclick="
+  updateCalculator('7');
+  ">7</button>
+  <button class="gray" onclick="
+  updateCalculator('8');
+  ">8</button>
+  <button class="gray" onclick="
+  updateCalculator('9');
+  ">9</button>
+  <button class="gray yellow" onclick="
+  updateCalculator('*');
+  ">*</button>
+  </p>
+  <p>
+    <button class="gray" onclick="
+  updateCalculator('0');
+  ">0</button>
+  <button class="gray" onclick="
+  updateCalculator('.');
+  ">.</button>
+  <button class="gray" onclick="
+  updateCalculator('=');
+  ">=</button>
+  <button class="gray yellow" onclick="
+  updateCalculator('/');
+  ">/</button>
+  </p>
+  <p><button class="gray clear" onclick="
+  updateCalculator('clear');
+  ">Clear</button></p>
+  <script>
+    var calculation='';
+    function updateCalculator(operation){
+      switch (operation) {
+        case '1':
+        calculation+='1';
+        console.log(calculation);
+          break;
+        case '2':
+        calculation+='2';
+        console.log(calculation);
+          break;
+        case '3':
+        calculation+='3';
+        console.log(calculation);
+          break;
+        case '+':
+        calculation+='+';
+        console.log(calculation);
+          break;
+        case '4':
+        calculation+='4';
+        console.log(calculation);
+          break;
+        case '5':
+        calculation+='5';
+        console.log(calculation);
+          break;
+        case '6':
+        calculation+='6';
+        console.log(calculation);
+          break;
+        case '-':
+        calculation+='-';
+        console.log(calculation);
+          break;
+        case '7':
+        calculation+='7';
+        console.log(calculation);
+          break;
+        case '8':
+        calculation+='8';
+        console.log(calculation);
+          break;
+        case '9':
+        calculation+='9';
+        console.log(calculation);
+          break;
+        case '*':
+        calculation+='*';
+        console.log(calculation);
+          break;
+        case '0':
+        calculation+='0';
+        console.log(calculation);
+          break;
+        case '.':
+        calculation+='.';
+        console.log(calculation);
+          break;
+        case '=':
+        calculation=eval(calculation);
+        console.log(calculation);
+          break;
+        case '/':
+        calculation+='/';
+        console.log(calculation);
+          break;
+        case 'clear':
+        calculation='';
+        console.clear();
+        console.log(calculation);
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
