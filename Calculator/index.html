@@ -28,7 +28,7 @@
     }
   </style>
 </head>
-<body>
+<body onkeydown="pressedKey(event.key)">
   <p></p>
   <p>
     <button class="gray" onclick="
@@ -92,6 +92,8 @@
   <script>
     let calculation=JSON.parse(localStorage.getItem('calculation'))|| '';
     console.log(calculation);
+    function pressedKey(key){
+    }
     function updateCalculator(operation){
       switch (operation) {
         case '1':
