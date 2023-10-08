@@ -90,83 +90,24 @@
   updateCalculator('clear');
   ">Clear</button></p>
   <script>
-    let calculation=JSON.parse(localStorage.getItem('calculation'))|| '';
+    let calculation=localStorage.getItem('calculation')|| '';
     console.log(calculation);
-    function pressedKey(key){
-    }
     function updateCalculator(operation){
-      switch (operation) {
-        case '1':
-        calculation+='1';
-        console.log(calculation);
-          break;
-        case '2':
-        calculation+='2';
-        console.log(calculation);
-          break;
-        case '3':
-        calculation+='3';
-        console.log(calculation);
-          break;
-        case '+':
-        calculation+='+';
-        console.log(calculation);
-          break;
-        case '4':
-        calculation+='4';
-        console.log(calculation);
-          break;
-        case '5':
-        calculation+='5';
-        console.log(calculation);
-          break;
-        case '6':
-        calculation+='6';
-        console.log(calculation);
-          break;
-        case '-':
-        calculation+='-';
-        console.log(calculation);
-          break;
-        case '7':
-        calculation+='7';
-        console.log(calculation);
-          break;
-        case '8':
-        calculation+='8';
-        console.log(calculation);
-          break;
-        case '9':
-        calculation+='9';
-        console.log(calculation);
-          break;
-        case '*':
-        calculation+='*';
-        console.log(calculation);
-          break;
-        case '0':
-        calculation+='0';
-        console.log(calculation);
-          break;
-        case '.':
-        calculation+='.';
-        console.log(calculation);
-          break;
-        case '=':
+      if(operation==='='){
         calculation=eval(calculation);
         console.log(calculation);
-          break;
-        case '/':
-        calculation+='/';
-        console.log(calculation);
-          break;
-        case 'clear':
-        calculation='';
-        console.clear();
-        console.log(calculation);
-          break;
+        localStorage.setItem('calculation',calculation);
+        return;
       }
-      localStorage.setItem('calculation',JSON.stringify(calculation));
+      if(operation ==='clear'){
+        calculation ='';
+        console.clear();
+        localStorage.setItem('calculation',calculation);
+        return;
+      }
+      calculation+=operation;
+      console.log(calculation);
+      localStorage.setItem('calculation',calculation);
     }
   </script>
 </body>
