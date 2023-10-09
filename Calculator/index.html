@@ -28,8 +28,8 @@
     }
   </style>
 </head>
-<body onkeydown="pressedKey(event.key)">
-  <p></p>
+<body >
+  <p class="js-display-calculation"></p>
   <p>
     <button class="gray" onclick="
   updateCalculator('1');
@@ -91,22 +91,24 @@
   ">Clear</button></p>
   <script>
     let calculation=localStorage.getItem('calculation')|| '';
-    console.log(calculation);
+    let displayCalculation = document.querySelector('.js-display-calculation');
+    displayCalculation.innerHTML=calculation;
+
     function updateCalculator(operation){
       if(operation==='='){
         calculation=eval(calculation);
-        console.log(calculation);
+        displayCalculation.innerHTML=calculation;
         localStorage.setItem('calculation',calculation);
         return;
       }
       if(operation ==='clear'){
         calculation ='';
-        console.clear();
+        displayCalculation.innerHTML='';
         localStorage.setItem('calculation',calculation);
         return;
       }
       calculation+=operation;
-      console.log(calculation);
+      displayCalculation.innerHTML=calculation;
       localStorage.setItem('calculation',calculation);
     }
   </script>
