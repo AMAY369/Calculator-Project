@@ -4,29 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>calculator</title>
-  <style>
-    body{
-      background-color: black;
-      color: white;
-    }
-    .gray{
-      background-color: rgb(37, 36, 36);
-      height: 60px;
-      width: 60px;
-      border: 0px solid black;
-      border-radius: 50%;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin: 3px;
-    }
-    .yellow{
-      background-color: orange;
-    }
-    .clear{
-      font-size: 1.2rem;
-    }
-  </style>
+  <link rel="icon" href="/Calculator-Project/calculator.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body >
   <p class="js-display-calculation"></p>
@@ -89,28 +68,6 @@
   <p><button class="gray clear" onclick="
   updateCalculator('clear');
   ">Clear</button></p>
-  <script>
-    let calculation=localStorage.getItem('calculation')|| '';
-    let displayCalculation = document.querySelector('.js-display-calculation');
-    displayCalculation.innerHTML=calculation;
-
-    function updateCalculator(operation){
-      if(operation==='='){
-        calculation=eval(calculation);
-        displayCalculation.innerHTML=calculation;
-        localStorage.setItem('calculation',calculation);
-        return;
-      }
-      if(operation ==='clear'){
-        calculation ='';
-        displayCalculation.innerHTML='';
-        localStorage.setItem('calculation',calculation);
-        return;
-      }
-      calculation+=operation;
-      displayCalculation.innerHTML=calculation;
-      localStorage.setItem('calculation',calculation);
-    }
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
