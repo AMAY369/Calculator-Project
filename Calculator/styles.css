@@ -19,3 +19,7 @@ body{
 .clear{
   font-size: 1.2rem;
 }
+.display-calculation{
+  margin-left: 5px;
+  font-size: 2rem;
+}

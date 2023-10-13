@@ -7,8 +7,8 @@
   <link rel="icon" href="/Calculator-Project/calculator.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body >
-  <p class="js-display-calculation"></p>
+<body onkeydown="pressedKey(event.key); console.log(event.key)">
+  <p class="js-display-calculation display-calculation"></p>
   <p>
     <button class="gray" onclick="
   updateCalculator('1');
@@ -20,7 +20,7 @@
   updateCalculator('3');
   ">3</button>
   <button class="gray yellow"  onclick="
-  updateCalculator('+');
+  updateCalculator(' + ');
   ">+</button>
   </p>
   <p>
@@ -34,7 +34,7 @@
   updateCalculator('6');
   ">6</button>
   <button class="gray yellow" onclick="
-  updateCalculator('-');
+  updateCalculator(' - ');
   ">-</button>
   </p>
   <p>
@@ -48,7 +48,7 @@
   updateCalculator('9');
   ">9</button>
   <button class="gray yellow" onclick="
-  updateCalculator('*');
+  updateCalculator(' * ');
   ">*</button>
   </p>
   <p>
@@ -62,7 +62,7 @@
   updateCalculator('=');
   ">=</button>
   <button class="gray yellow" onclick="
-  updateCalculator('/');
+  updateCalculator(' / ');
   ">/</button>
   </p>
   <p><button class="gray clear" onclick="
