@@ -36,7 +36,12 @@ let calculation=localStorage.getItem('calculation')|| '';
         updateCalculator('=')
       }
       else if(key==='Backspace'){
-        calculation=Math.floor(calculation/10);
+        if(calculation<0){
+          calculation=Math.floor((-calculation)/10);
+        }
+        else{
+          calculation=Math.floor(calculation/10);
+        }
         if(calculation==0){
           calculation='';
         }
