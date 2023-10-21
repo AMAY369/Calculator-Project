@@ -8,66 +8,83 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body onkeydown="pressedKey(event.key);">
-  <p class="js-display-calculation display-calculation"></p>
-  <p>
-    <button class="gray" onclick="
-  updateCalculator('1');
-  ">1</button>
-  <button class="gray" onclick="
-  updateCalculator('2');
-  ">2</button>
-  <button class="gray" onclick="
-  updateCalculator('3');
-  ">3</button>
-  <button class="gray yellow"  onclick="
-  updateCalculator(' + ');
-  ">+</button>
-  </p>
-  <p>
-    <button class="gray" onclick="
-  updateCalculator('4');
-  ">4</button>
-  <button class="gray" onclick="
-  updateCalculator('5');
-  ">5</button>
-  <button class="gray" onclick="
-  updateCalculator('6');
-  ">6</button>
-  <button class="gray yellow" onclick="
-  updateCalculator(' - ');
-  ">-</button>
-  </p>
-  <p>
-    <button class="gray" onclick="
-  updateCalculator('7');
-  ">7</button>
-  <button class="gray" onclick="
-  updateCalculator('8');
-  ">8</button>
-  <button class="gray" onclick="
-  updateCalculator('9');
-  ">9</button>
-  <button class="gray yellow" onclick="
-  updateCalculator(' * ');
-  ">*</button>
-  </p>
-  <p>
-    <button class="gray" onclick="
-  updateCalculator('0');
-  ">0</button>
-  <button class="gray" onclick="
-  updateCalculator('.');
-  ">.</button>
-  <button class="gray" onclick="
-  updateCalculator('=');
-  ">=</button>
-  <button class="gray yellow" onclick="
-  updateCalculator(' / ');
-  ">/</button>
-  </p>
-  <p><button class="gray clear" onclick="
-  updateCalculator('clear');
-  ">Clear</button></p>
+  <div class="js-container container">
+    <div class="js-calculator calculator">
+      <p class="js-display-calculation display-calculation">
+      </p>
+      <p>
+        <button class="button-properties orange-button clear-button" onclick="updateCalculator('clear');">
+          Clear
+        </button>
+        <button class="button-properties orange-button">
+          ^
+        </button>
+        <button class="button-properties orange-button">
+          &radic;
+        </button>
+        <button class="button-properties orange-button"  onclick="updateCalculator(' + ');">
+          +
+        </button>
+      </p>
+      <p>
+        <button class="button-properties" onclick="updateCalculator('1');">
+          1
+        </button>
+        <button class="button-properties" onclick="updateCalculator('2');">
+          2
+        </button>
+        <button class="button-properties" onclick="updateCalculator('3');">
+          3
+        </button>
+        <button class="button-properties orange-button" onclick="updateCalculator(' - ');">
+          -
+        </button>
+      </p>
+      <p>
+        <button class="button-properties" onclick="updateCalculator('4');">
+          4
+        </button>
+        <button class="button-properties" onclick="updateCalculator('5');">
+          5
+        </button>
+        <button class="button-properties" onclick="updateCalculator('6');">
+          6
+        </button>
+        <button class="button-properties orange-button" onclick="updateCalculator(' * ');">
+          *
+        </button>
+      </p>
+      <p>
+        <button class="button-properties" onclick="updateCalculator('7');">
+          7
+        </button>
+        <button class="button-properties" onclick="updateCalculator('8');">
+          8
+        </button>
+        <button class="button-properties" onclick="updateCalculator('9');">
+          9
+        </button>
+        <button class="button-properties orange-button" onclick="updateCalculator(' / ');">
+          /
+        </button>
+      </p>
+      <p>
+        <button class="button-properties" onclick="updateCalculator('0');">
+          0
+        </button>
+        <button class="button-properties" onclick="updateCalculator('.');">
+          .
+        </button>
+        <button class="button-properties " onclick="pressedKey('Backspace')">
+          &#x2190;
+        </button>
+        <button class="button-properties orange-button" onclick="updateCalculator('=');">
+          =
+        </button>
+      </p>
+    </div>
+  </div>
+</body>
   <script src="scripts.js"></script>
 </body>
 </html>
