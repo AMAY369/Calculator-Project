@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+  <div class="page">
+    <div class="calculator">
+      <input type="text" class="calculation js-calculation" readonly title="text"/>
+      <p class="digits js-digits">
+        <button onclick="calculation='';displayCalculation();" class="clear-button orange-button">
+        Clear
+        </button>
+        <button class="orange-button">
+          &#8743;
+        </button>
+        <button class="orange-button">
+          &#8730;
+        </button>
+        <button class="orange-button" onclick="calculate(' + ')" >
+          +
+        </button>
+      </p>
+      <p class="digits js-digits">
+        <button onclick="calculate('1')" class="gray-button">
+          1
+        </button>
+        <button onclick="calculate('2')" class="gray-button">
+          2
+        </button>
+        <button onclick="calculate('3')" class="gray-button">
+          3
+        </button>
+        <button onclick="calculate(' - ')" class="orange-button">
+          -
+        </button>
+      </p>
+      <p class="digits js-digits">
+        <button onclick="calculate('4')" class="gray-button">
+          4
+        </button>
+        <button onclick="calculate('5')" class="gray-button">
+          5
+        </button>
+        <button onclick="calculate('6')" class="gray-button">
+          6
+        </button>
+        <button onclick="calculate(' * ')" class="orange-button">
+          *
+        </button>
+      </p>
+      <p class="digits js-digits">
+        <button onclick="calculate('7')" class="gray-button">
+          7
+        </button>
+        <button onclick="calculate('8')" class="gray-button">
+          8
+        </button>
+        <button onclick="calculate('9')" class="gray-button">
+          9
+        </button>
+        <button onclick="calculate(' / ')" class="orange-button">
+          /
+        </button>
+      </p>
+      <p class="digits js-digits">
+        <button onclick="calculate('0')" class="gray-button">
+          0
+        </button>
+        <button onclick="calculate('.')" class="gray-button">
+          .
+        </button>
+        <button class="gray-button" onclick="removeDigit();">
+          &#8592;
+        </button>
+        <button onclick="calculate('=')" class="orange-button">
+          =
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <script src="Calculator.js"></script>
+</body>
+</html>
